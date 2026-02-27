@@ -1,0 +1,78 @@
+:root {
+    --primary: #2563eb;
+    --dark: #1e293b;
+    --light: #f8fafc;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.placeholder-img {
+    width: 300px;
+    height: 400px;
+    background: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.product-info {
+    text-align: center;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.buy-button {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.buy-button:hover {
+    transform: scale(1.05);
+}
+
+/* Desktop Adjustment */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row;
+        gap: 5rem;
+        padding-top: 5rem;
+    }
+    .product-info {
+        text-align: left;
+    }
+}
