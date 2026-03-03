@@ -41,6 +41,17 @@ window.changeQty = function(amount) {
     renderCart();
 };
 
+// Link the Nav Cart icon to the Modal
+const navCartBtn = document.querySelector('.cart');
+
+navCartBtn.addEventListener('click', () => {
+    modal.style.display = "block";
+    renderCart(); // Refresh the numbers inside the modal
+});
+
+// Optional: Change cursor to pointer so users know it's clickable
+navCartBtn.style.cursor = "pointer";
+
 // --- 4. UI UPDATE ENGINE ---
 function renderCart() {
     const total = (cartCount * unitPrice).toFixed(2);
@@ -85,6 +96,13 @@ window.onclick = (event) => {
         modal.style.display = "none";
     }
 };
+
+// Close modal if user clicks anywhere outside the white box
+window.addEventListener('click', (event) => {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+});
 
 // Final Checkout Redirect
 checkoutBtn.addEventListener('click', () => {
