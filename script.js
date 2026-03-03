@@ -107,5 +107,5 @@ window.addEventListener('click', (event) => {
 // Final Checkout Redirect
 checkoutBtn.addEventListener('click', () => {
     // Replace with your real Stripe/LemonSqueezy link
-    window.location.href = "https://buy.stripe.com/test_link";
+    window.location.href = "https://buy.stripe.com/";
 });
